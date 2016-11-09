@@ -14,7 +14,8 @@
 
   clojure.lang.IFn
   (invoke [parser text]
-    (parse parser text)))
+    (parse parser text))
+  (applyTo [this args] (clojure.lang.AFn/applyToHelper this args)))
 
 (defn parse*
   "Helper for parse"
